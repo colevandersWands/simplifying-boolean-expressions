@@ -8,6 +8,7 @@ for each step, you'll fill in one of these templates. all you need to change is 
 const exp = (a,b,c) =>  /* next expression */;
 test_exp(exp, exp_cases);  }
 ```
+all of these exercises can be completed in no more than 5 steps, but feel free to play practice applying a law that challenges you even if it takes a little longer
 
 you might find [this site](https://www.dcode.fr/boolean-expressions-calculator) helpful, it'll be useful for checking your work but it won't solve the steps for you.
 
@@ -52,7 +53,7 @@ test_exp(exp, exp_cases);  }
 const exp = (a,b,c) =>      !(true) ;
 test_exp(exp, exp_cases);  }
 
-{ console.log('\n final expression');
+{ console.log('\n end');
 const exp = (a,b,c) =>      false ;
 test_exp(exp, exp_cases);  }
 ```
@@ -61,38 +62,138 @@ test_exp(exp, exp_cases);  }
 
 ---
 
-## Example 1
+## Exercise 1
+
+```js
+console.log(' start');
+const exp = (a,b,c) =>      false && !a && !(!b && !c) ;
+const exp_cases = gen_cases_from_exp(exp);
+console.log(exp);
+truth_table(exp_cases);
+
+{ console.log('\n name of law');
+const exp = (a,b,c) =>  /* next expression */;
+test_exp(exp, exp_cases);  }
+
+{ console.log('\n end');
+const exp = (a,b,c) =>      !(true) ;
+test_exp(exp, exp_cases);  }
+
+```
 
 
 [TOP](#simplifying-boolean-expressions)
 
 ---
 
-## Example 2
+## Exercise 2
+
+```js
+console.log(' start');
+const exp = (a,b,c) =>      !(a || !c) && (!c && (b || c)) ;
+const exp_cases = gen_cases_from_exp(exp);
+console.log(exp);
+truth_table(exp_cases);
+
+{ console.log('\n name of law');
+const exp = (a,b,c) =>  /* next expression */;
+test_exp(exp, exp_cases);  }
+
+{ console.log('\n end');
+const exp = (a,b,c) =>      !a && (c && (!c && (b || c))) ;
+test_exp(exp, exp_cases);  }
+```
 
 [TOP](#simplifying-boolean-expressions)
 
 ---
 
-## Example 3
+## Exercise 3
+
+```js
+console.log(' start');
+const exp = (a,b,c) =>      (a && b) || (a && c) || (b && !c) ;
+const exp_cases = gen_cases_from_exp(exp);
+console.log(exp);
+truth_table(exp_cases);
+
+{ console.log('\n name of law');
+const exp = (a,b,c) =>  /* next expression */;
+test_exp(exp, exp_cases);  }
+
+{ console.log('\n end');
+const exp = (a,b,c) =>      (a && c) || (b && !c) ;
+test_exp(exp, exp_cases);  }
+```
 
 [TOP](#simplifying-boolean-expressions)
 
 ---
 
-## Example 4
+## Exercise 4
+
+```js
+console.log(' start');
+const exp = (a,b,c) =>      !a && (false && (b || c)) ;
+const exp_cases = gen_cases_from_exp(exp);
+console.log(exp);
+truth_table(exp_cases);
+
+{ console.log('\n name of law');
+const exp = (a,b,c) =>  /* next expression */;
+test_exp(exp, exp_cases);  }
+
+{ console.log('\n end');
+const exp = (a,b,c) =>      false && !a && !(!b && !c) ;
+test_exp(exp, exp_cases);  }
+```
 
 [TOP](#simplifying-boolean-expressions)
 
 ---
 
-## Example 5
+## Exercise 5
+
+```js
+console.log(' start');
+const exp = (a,b,c) =>      !a && (false && (b || c)) ;
+const exp_cases = gen_cases_from_exp(exp);
+console.log(exp);
+truth_table(exp_cases);
+
+{ console.log('\n name of law');
+const exp = (a,b,c) =>  /* next expression */;
+test_exp(exp, exp_cases);  }
+
+{ console.log('\n end');
+const exp = (a,b,c) =>      false && !a && !(!b && !c) ;
+test_exp(exp, exp_cases);  }
+```
 
 [TOP](#simplifying-boolean-expressions)
 
 ---
 
-## Example 6
+## Exercise 6 
+
+(challenge)
+
+```js
+console.log(' start');
+const exp = (a,b,c) =>      !a && (true && (b || c)) ;
+const exp_cases = gen_cases_from_exp(exp);
+console.log(exp);
+truth_table(exp_cases);
+
+{ console.log('\n name of law');
+const exp = (a,b,c) =>  /* next expression */;
+test_exp(exp, exp_cases);  }
+
+{ console.log('\n end');
+const exp = (a,b,c) =>      ( !a && b) || ( !a && c) ;
+test_exp(exp, exp_cases);  }
+```
+
 
 [TOP](#simplifying-boolean-expressions)
 
